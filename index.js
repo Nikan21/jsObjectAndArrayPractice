@@ -1,13 +1,20 @@
 /* Arrays */
 /* 1 */
 
-/*Тут что то не то */
-const array = [1, 2, 3, 4, 5];
+const array = [1, 2, 3, 4, 5, 6, 7];
 
+/* 2 */
 const summNumbersLessFive = array.reduce((summValue, currentValue) =>{
-    if(currentValue <= 4){
-    return summValue + currentValue
-    }
+    if(currentValue < 5){
+        return summValue + currentValue;
+    }return summValue;
+
 })
 
-console.log(summNumbersLessFive);
+/* 3 */
+const array2 = array.map(function(value){
+    if (5 < value & value < 10){
+        return value;
+    }
+});
+console.log(array2);
