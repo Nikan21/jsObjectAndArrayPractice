@@ -1,18 +1,13 @@
 /* Arrays */
 /* 1 */
 
+/*Тут что то не то */
 const array = [1, 2, 3, 4, 5];
 
-for (let i = 0; i <= array.length; i++) {
-    const element = array[i];
-    if (element >= 5){
-        continue
-    }else{
-        const reduceSumm = (accum, value) =>{
-            return accum + value;
-        }
-        const summArray = array.reduce(reduceSumm);
-        console.log(summArray);
-
+const summNumbersLessFive = array.reduce((summValue, currentValue) =>{
+    if(currentValue <= 4){
+    return summValue + currentValue
     }
-}
+})
+
+console.log(summNumbersLessFive);
